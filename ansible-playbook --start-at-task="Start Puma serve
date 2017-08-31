@@ -1,0 +1,11 @@
+ansible-playbook --start-at-task="Start Puma server." ./playbooks/rails_app/deploy.yml --verbose -i ./inventories/vagrant/inventory --extra-vars="ansible_ssh_user=vagrant ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key"
+
+
+bundle exec puma -d --bind unix:///home/antonio/Escritorio/blog/tmp/sockets/puma.sock --pidfile /home/antonio/Escritorio/blog/tmp/pids/puma.pid --state /home/antonio/Escritorio/blog/tmp/pids/puma.state
+
+antonio@AVDESKTOP:~/Escritorio/blog$ bundle exec puma -d --bind tcp://127.0.0.1:9292 --pidfile /home/antonio/Escritorio/blog/tmp/pids/puma.pid --state /home/antonio/Escritorio/blog/tmp/pids/puma.state -e production
+
+MacBook-de-Antonio:blog antonio$ bundle exec puma -d --bind tcp://127.0.0.1:9292 --pidfile /Users/antonio/Desktop/blog/tmp/pids/puma.pid --state /Users/antonio/Desktop/blog/tmp/pids/puma.state -e production 
+
+MacBook-de-Antonio:Rails-Puma_Nginx antonio$ bundle exec puma -d --bind unix:///Users/antonio/Desktop/Rails-Puma_Nginx/tmp/sockets/puma.sock --pidfile /Users/antonio/Desktop/Rails-Puma_Nginx/tmp/pids/puma.pid --state /Users/antonio/Desktop/Rails-Puma_Nginx/tmp/pids/puma.state
+
