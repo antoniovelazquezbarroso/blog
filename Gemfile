@@ -29,6 +29,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Unicorn as the app server
  gem 'puma'
 
+# FOR STRUCTURED LOGGING
+# SEE https://kartar.net/2015/12/structured-logging/
+gem 'lograge'
+gem 'logstash-event'
+gem 'logstash-logger'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

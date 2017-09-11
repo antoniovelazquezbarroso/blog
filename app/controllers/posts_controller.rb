@@ -4,6 +4,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    # MENSAJE EXPERIMENTAL PARA PROBAR LOS LOGS
+    logger.info message: 'ESTE ES MI MENSAJE', user: @user
     @posts = Post.all
   end
 
